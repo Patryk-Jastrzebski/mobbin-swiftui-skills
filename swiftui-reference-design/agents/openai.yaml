@@ -1,0 +1,14 @@
+interface:
+  display_name: SwiftUI Reference Design
+  short_description: Natywne aplikacje SwiftUI na bazie referencji UI
+  default_prompt: Użyj $swiftui-reference-design i referencji Mobbin, aby zaprojektować
+    i zaimplementować flow w SwiftUI.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
