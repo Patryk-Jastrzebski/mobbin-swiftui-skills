@@ -1,6 +1,6 @@
 ---
 name: swiftui-reference-design
-description: Design, implement and refine native iOS apps and flows in SwiftUI from Mobbin references or supplied screenshots. Use for reference-driven SwiftUI screens, onboarding, paywalls, navigation, UI state, accessibility and visual verification.
+description: Design, implement and refine native iOS apps and flows in SwiftUI from Mobbin references or supplied screenshots. Use for reference-driven SwiftUI screens, onboarding, paywalls, navigation, UI state and visual verification.
 ---
 # SwiftUI Reference Design
 
@@ -18,7 +18,7 @@ Inspect reference images before adopting a pattern. Separate observed layout fro
 
 Define a small, coherent set of semantic colors, text styles, spacing and shapes. Respect the existing brand, including justified multiple accents. Avoid arbitrary decorative gradients and generic cards added without a product reason. Use native semantic text styles, SF Symbols and controls where they fit. Prefer system behavior to custom recreations of navigation bars, keyboards or sheets.
 
-Support Dynamic Type, light/dark appearances where applicable, meaningful VoiceOver labels and reading order, non-color status cues, accessible contrast and comfortable hit regions (normally at least 44 by 44 points). Use flexible layouts and appropriate scrolling for long copy, keyboard and accessibility sizes; do not hardcode a screenshot's dimensions as universal device geometry. Preserve safe areas around content and primary actions.
+Use flexible layouts; do not hardcode a screenshot's dimensions as universal device geometry. Preserve safe areas around content and primary actions.
 
 ## Build complete behavior
 
@@ -38,7 +38,7 @@ Prefer SF Symbols for controls. When custom art is needed, use available user as
 
 Read [verification.md](references/verification.md) before reporting implementation complete. Build with the project's real scheme and supported simulator; inspect rendered screens and exercise the changed flow when Xcode is available. Fix concrete defects and recheck the affected behavior. Stop when the agreed acceptance criteria are met, rather than chasing an unbounded claim of perfection.
 
-If macOS/Xcode or interaction tooling is unavailable, complete the feasible source work and report exactly which build, visual and device checks remain. Do not replace the deliverable with a web prototype or claim simulator, device performance or accessibility results that were not obtained. Previews help layout iteration but do not prove navigation or purchase behavior.
+If macOS/Xcode or interaction tooling is unavailable, complete the feasible source work and report exactly which build, visual and device checks remain. Do not replace the deliverable with a web prototype or claim simulator or device performance results that were not obtained. Previews help layout iteration but do not prove navigation or purchase behavior.
 
 Report what changed, references used, verification performed and material remaining limitations. No automatic publication, signing-account changes or paid actions are implied by this workflow.
 

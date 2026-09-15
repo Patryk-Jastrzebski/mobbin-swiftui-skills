@@ -8,7 +8,7 @@
 | Top-level peer destinations | TabView; preserve each tab's navigation state |
 | Independent task | sheet with its own NavigationStack when multi-step |
 | Short selection or filters | sheet with supported presentation detents, or native Picker/Menu |
-| Immersive task | fullScreenCover with an accessible exit |
+| Immersive task | fullScreenCover with a clear exit |
 | Destructive choice | confirmationDialog or alert, based on context |
 | Item actions | Menu, contextMenu or appropriate swipeActions |
 
@@ -28,7 +28,7 @@ Use the project's persistence layer. @AppStorage suits small preferences, not se
 
 ## Controls and layout
 
-Use Button, Toggle, Picker, DatePicker, Slider, Form/List, .searchable and .refreshable where appropriate. Use PhotosPicker, ShareLink or system-controller bridges for relevant platform tasks. Keep native control semantics and accessible labels.
+Use Button, Toggle, Picker, DatePicker, Slider, Form/List, .searchable and .refreshable where appropriate. Use PhotosPicker, ShareLink or system-controller bridges for relevant platform tasks. Keep native control semantics.
 
 Use @FocusState, textContentType, keyboardType, submitLabel and onSubmit for input flows. Keep visible field labels and specific inline errors. Preserve keyboard-safe-area behavior; consider safeAreaInset for persistent bottom actions. Do not apply ignoresSafeArea to the entire interactive hierarchy to match edge-to-edge reference art.
 
@@ -38,7 +38,7 @@ Use List for conventional lists and ScrollView with lazy containers for custom f
 
 Use native transitions first, scoped withAnimation or animation(_:value:) for custom changes. Prefer stable identity and interruptible state transitions. For custom gestures, use gesture state and supported predicted-end information deliberately; do not paste Reanimated spring constants into SwiftUI. Reserve matchedGeometryEffect or newer navigation transitions for justified continuity and verify their availability and behavior.
 
-Read accessibilityReduceMotion and reduce spatial effects accordingly. Verify custom motion under interrupted gestures, rapid input and keyboard changes. Use supported sensoryFeedback or UIKit feedback generators where appropriate without duplicating feedback the system already supplies.
+Read accessibilityReduceMotion and reduce spatial effects accordingly. Verify custom motion under interrupted gestures and rapid input. Use supported sensoryFeedback or UIKit feedback generators where appropriate without duplicating feedback the system already supplies.
 
 Measure identified performance problems with Instruments on a representative device and release configuration. Distinguish simulator smoothness from device frame pacing. Do not claim a universal 60/120 fps result from a recording. Optimize measured main-thread work, image decoding, data fetching or unnecessary invalidation, then remeasure the same interaction.
 

@@ -15,11 +15,11 @@ Run xcodebuild -list against the discovered project/workspace, then build with i
 
 ## Visual and interaction checks
 
-Launch the actual app using the environment's supported tooling. Capture and open screenshots; compare layout and hierarchy with selected reference evidence. Exercise the changed flow, including back, cancel, skip, validation, retry and rapid taps. Check keyboard focus and dismissal, scrolling under bars, safe areas and persistent CTA placement.
+Launch the actual app using the environment's supported tooling. Capture and open screenshots; compare layout and hierarchy with selected reference evidence. Exercise the changed flow, including back, cancel, skip, validation, retry and rapid taps. Check safe areas and persistent CTA placement.
 
-For motion-sensitive changes, record the relevant complete flow and inspect it at normal speed and around suspicious transitions. Use available automation or XCTest/XCUITest for meaningful state/navigation regression checks. Do not claim that simctl alone can tap/type or that screenshot capture exercises interactions.
+For motion-sensitive changes, record the relevant complete flow and inspect it at normal speed and around suspicious transitions. Do not claim that simctl alone can tap/type or that screenshot capture exercises interactions.
 
-Check the supported device classes: a primary iPhone and a compact supported size, plus iPad if supported. Verify light/dark appearance as applicable, long localized content, default and accessibility Dynamic Type, VoiceOver navigation and Reduce Motion. Force relevant loading/empty/error/offline states rather than checking only populated screens.
+Verify Reduce Motion for custom motion. Force relevant loading/empty/error/offline states rather than checking only populated screens.
 
 Specifically verify completed onboarding/authentication cannot be re-entered through stale navigation, optional gates return to the originating feature, cancelled/pending/failed purchases do not grant access, and relaunch restores only intended persisted state. Limit purchase testing to supported test environments.
 
@@ -30,6 +30,6 @@ Distinguish:
 - Successful Xcode build and actual tests run.
 - Visually inspected screenshots/previews.
 - Exercised simulator interactions and motion.
-- Physical-device profiling or accessibility checks, if actually performed.
+- Physical-device profiling, if actually performed.
 
 When tooling is missing, state the pending checks and how to run them using the discovered project details; do not invent test results. Recheck after meaningful fixes. Stop when task-specific acceptance criteria are met and remaining risks are stated.

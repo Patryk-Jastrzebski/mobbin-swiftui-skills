@@ -4,7 +4,7 @@
 
 ### Reference-driven product design for native iOS apps
 
-Research real-world mobile interfaces with **Mobbin**, extract the design patterns that matter, and turn them into polished, accessible **SwiftUI**.
+Research real-world mobile interfaces with **Mobbin**, extract the design patterns that matter, and turn them into polished **SwiftUI**.
 
 <br />
 
@@ -160,12 +160,7 @@ The skill considers:
 * typography
 * spacing
 * safe areas
-* Dynamic Type
-* VoiceOver
 * Reduce Motion
-* hit targets
-* keyboard behavior
-* light and dark appearance
 * loading states
 * empty states
 * error states
@@ -185,7 +180,6 @@ ScrollView / List
 SF Symbols
 System typography
 Native controls
-Accessibility APIs
 SwiftUI state management
 ```
 
@@ -209,8 +203,7 @@ flowchart LR
     B --> C["🧠 Pattern analysis"]
     C --> D["📐 Design direction"]
     D --> E[" SwiftUI implementation"]
-    E --> F["♿ Accessibility"]
-    F --> G["📱 Build & verify"]
+    E --> G["📱 Build & verify"]
     G --> H["✨ Refine"]
 ```
 
@@ -276,8 +269,6 @@ But also:
 ```text
 Does it feel native?
 Is hierarchy clear?
-Does Dynamic Type work?
-Does VoiceOver make sense?
 What happens when data is missing?
 What happens when loading fails?
 Does the rendered screen match the intended design?
@@ -524,9 +515,6 @@ Then implement the complete experience including:
 - empty
 - error
 - success
-- accessibility
-- Dynamic Type
-- dark mode
 
 Build and visually verify the result when tooling is available.
 ```
@@ -566,7 +554,6 @@ Identify concrete problems with:
 - spacing
 - typography
 - native iOS conventions
-- accessibility
 - state handling
 - interaction clarity
 
@@ -654,7 +641,6 @@ Prefer SwiftUI and native platform behavior for:
 * scrolling
 * keyboards
 * typography
-* accessibility
 * system icons
 * gestures
 
@@ -704,24 +690,7 @@ Good product UI survives all of them.
 
 ---
 
-## 6. Accessibility is part of the design
-
-Accessibility should not be a cleanup pass after implementation.
-
-Consider it while designing:
-
-* VoiceOver order
-* accessibility labels
-* Dynamic Type
-* readable contrast
-* minimum hit targets
-* Reduce Motion
-* meaningful grouping
-* semantic controls
-
----
-
-## 7. Verify the rendered result
+## 6. Verify the rendered result
 
 Source code can look correct while the interface still feels wrong.
 
@@ -762,7 +731,6 @@ These skills work particularly well for:
 | 🛒 Commerce       | product details, cart, checkout                 |
 | 📊 Data-heavy UI  | analytics, finance, health                      |
 | 📭 States         | empty, loading, error, offline                  |
-| ♿ Accessibility   | Dynamic Type, VoiceOver, Reduce Motion          |
 | 🎨 Redesigns      | improving existing SwiftUI screens              |
 
 ---
@@ -805,7 +773,6 @@ Architecture inspection
 SwiftUI implementation
 Native behavior
 UI states
-Accessibility
 Build verification
 Visual refinement
 ```
@@ -820,7 +787,7 @@ Together:
 │ research            │──────▶│ design              │
 │                     │       │                     │
 │ Real references     │       │ Native SwiftUI      │
-│ Pattern analysis    │       │ Accessibility       │
+│ Pattern analysis    │       │ UI states           │
 │ UX decisions        │       │ Verification        │
 └─────────────────────┘       └─────────────────────┘
 ```
