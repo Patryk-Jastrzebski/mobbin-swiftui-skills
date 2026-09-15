@@ -1,0 +1,14 @@
+interface:
+  display_name: Mobbin Design Research
+  short_description: Research ekranów i flow z Mobbin dla SwiftUI
+  default_prompt: Użyj $mobbin-design-research, aby znaleźć referencje i zaprojektować
+    flow mojej aplikacji iOS.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
